@@ -32,7 +32,7 @@ class SignUp extends Component {
             <label htmlFor="firstname">First name</label>
             <input type="text" id="firstname" placeholder="Your first name" />
             <label htmlFor="lastname">Last name</label>
-            <input type="text" id="lastname" placeholder="Your first name" />
+            <input type="text" id="lastname" placeholder="Your last name" />
           </div>
           <div className="email">
             <label htmlFor="email">Email</label>
@@ -45,11 +45,11 @@ class SignUp extends Component {
               {this.props.countries.map((c, i) => <option value={c} key={i}>{c}</option>)}
             </select>
             <label htmlFor="phone">Phone number</label>
-            <input type="phone" id="phone" />
+            <input type="phone" id="phone" placeholder="+7(___)___-__-__" />
           </div>
           <div className="password">
             <label htmlFor="password">Password</label>
-            <input type="password" id="password" />
+            <input type="password" id="password" placeholder="Your password" />
           </div>
           <div className="submit">
             <button>Continue</button>
