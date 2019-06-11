@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
 import './App.css';
+import SignUp from './SignUp';
+import SignIn from './SignIn';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor(){
+    super();
+    this.state = { showSignIn: true };
+  }
+
+  handleClickUp() {
+    this.setState({ showSignIn: false })
+    console.log(this.state.showSignIn)
+  }
+  handleClickIn() {
+    this.setState({ showSignIn: true })
+    console.log(this.state.showSignIn)
+  }
+
+  render() {
+    return (
+      <div className="App">
+      {this.state.showSignIn ? (
+        <div>
+          <span>Don't have an account?</span>
+          <span onClick={() => this.handleClickUp()}>Sign up</span>
+          <SignIn />
+        </div>)
+        : (
+          <div className="SignUp-container">
+            <span>Already have an account?</span>
+            <span onClick={() => this.handleClickIn()}>Sign in</span>
+            <SignUp />
+          </div>) }
+      </div>
+    );
+  }
 }
 
 export default App;
