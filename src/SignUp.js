@@ -2,6 +2,25 @@ import React, { Component } from 'react';
 import './SignUp.css';
 
 class SignUp extends Component {
+  static defaultProps = {
+    countries: [
+      'Russia',
+      'Kongo',
+      'Bulgaria',
+      'Sweden',
+      'Greece',
+      'USA',
+      'Great Britain',
+      'Canada',
+      'Brazil',
+      'China',
+      'India',
+      'Pakistan',
+      'Tunisia',
+      'Poland',
+      'Denmark',
+    ],
+  };
   render() {
     return (
       <div className="SignUp">
@@ -11,25 +30,30 @@ class SignUp extends Component {
         <form className="SignUp-form">
           <div className="names">
             <label htmlFor="firstname">First name</label>
-            <input type="text" id="firstname" />
+            <input type="text" id="firstname" placeholder="Your first name" />
             <label htmlFor="lastname">Last name</label>
-            <input type="text" id="lastname" />
+            <input type="text" id="lastname" placeholder="Your first name" />
           </div>
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" />
+          <div className="email">
+            <label htmlFor="email">Email</label>
+            <input type="email" id="email" placeholder="Your company email" />
+          </div>
           <div className="country-phone">
+            <label htmlFor="country">Country</label>
             <select id="country">
               <option value="">Choose your country</option>
-              <option value="Russia">Russia</option>
-              <option value="Kongo">Kongo</option>
-              <option value="Bulgarria">Bulgarria</option>
+              {this.props.countries.map((c, i) => <option value={c} key={i}>{c}</option>)}
             </select>
             <label htmlFor="phone">Phone number</label>
             <input type="phone" id="phone" />
           </div>
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" />
-          <button>Continue</button>
+          <div className="password">
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" />
+          </div>
+          <div className="submit">
+            <button>Continue</button>
+          </div>
         </form>
       </div>
     );
