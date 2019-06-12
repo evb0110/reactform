@@ -73,3 +73,12 @@ select {
   font-weight: normal;
   font-size: 14px;
 }
+
+@media (min-width: 701px) {
+  .App {
+    margin-top: 48px;
+  }
+  .question {
+    margin-right: 12px;
+  }
+}

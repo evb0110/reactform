@@ -29,23 +29,35 @@ class SignUp extends Component {
         </div>
         <form className="SignUp-form">
           <div className="names">
-            <label htmlFor="firstname">First name</label>
-            <input type="text" id="firstname" placeholder="Your first name" />
-            <label htmlFor="lastname">Last name</label>
-            <input type="text" id="lastname" placeholder="Your last name" />
+            <div className="firstname">
+              <label htmlFor="firstname">First name</label>
+              <input type="text" id="firstname" placeholder="Your first name" />
+            </div>
+            <div className="lastname">
+              <label htmlFor="lastname">Last name</label>
+              <input type="text" id="lastname" placeholder="Your last name" />
+            </div>
           </div>
           <div className="email">
             <label htmlFor="email">Email</label>
             <input type="email" id="email" placeholder="Your company email" />
           </div>
           <div className="country-phone">
-            <label htmlFor="country">Country</label>
-            <select id="country">
-              <option value="">Choose your country</option>
-              {this.props.countries.map((c, i) => <option value={c} key={i}>{c}</option>)}
-            </select>
-            <label htmlFor="phone">Phone number</label>
-            <input type="phone" id="phone" placeholder="+7(___)___-__-__" />
+            <div className="country">
+              <label htmlFor="country">Country</label>
+              <select id="country">
+                <option value="">Choose your country</option>
+                {this.props.countries.map((c, i) => (
+                  <option value={c} key={i}>
+                    {c}
+                  </option>
+                ))}
+              </select>
+            </div>
+            <div className="phone">
+              <label htmlFor="phone">Phone number</label>
+              <input type="phone" id="phone" placeholder="+7(___)___-__-__" />
+            </div>
           </div>
           <div className="password">
             <label htmlFor="password">Password</label>

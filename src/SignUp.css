@@ -20,27 +20,60 @@
     margin-right: 20px;
   }
 
-  .SignUp input,
-  .SignUp select,
-  .SignUp button {
-    box-sizing: border-box;
-    width: 100%;
-    height: 40px;
-    border: 1px solid #dbdbdb;
-    box-sizing: border-box;
-    border-radius: 4px;
-  }
+}
 
-  .SignUp button {
-    margin-top: 32px;
-    margin-bottom: 32px;
-  }
 
-  .anchor {
-    display: block;
-  }
+.SignUp input,
+.SignUp select,
+.SignUp button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #dbdbdb;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.SignUp button {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.anchor {
+  display: block;
 }
 
 .SignUp select {
   background-color: white;
+}
+
+
+@media (min-width: 701px) {
+  .SignUp {
+    width: 540px;
+  }
+
+  .SignUp-header {
+    text-align: left;
+  }
+
+  .names {
+    display: flex;
+  }
+
+  .country-phone {
+    display: flex;
+  }
+
+  .firstname, .lastname, .country, .phone {
+    flex: 1;
+  }
+  
+  .firstname, .country {
+    margin-right: 20px;
+  }
+
+  .Signup-container {
+    display: block;
+  }
 }
