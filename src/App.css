@@ -5,6 +5,7 @@
 .App .SignIn-container,
 .App .SignUp-container {
   display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 700px) {
@@ -78,7 +79,12 @@ select {
   .App {
     margin-top: 48px;
   }
+  
   .question {
     margin-right: 12px;
+  }
+
+  .switcher {
+    margin-left: 500px;
   }
 }

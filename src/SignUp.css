@@ -51,6 +51,7 @@
 @media (min-width: 701px) {
   .SignUp {
     width: 540px;
+    margin: auto;
   }
 
   .SignUp-header {
@@ -73,7 +74,11 @@
     margin-right: 20px;
   }
 
-  .Signup-container {
-    display: block;
+  .SignUp .SignUp-container {
+    display: flex;
+  }
+
+  .anchor {
+    display: inline;
   }
 }
