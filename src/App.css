@@ -8,6 +8,14 @@
   flex-direction: column;
 }
 
+button {
+  cursor: pointer;
+}
+
+button.active {
+  background-color: #4E42E4;
+}
+
 @media (max-width: 700px) {
   .App .SignIn-container,
   .App .SignUp-container {

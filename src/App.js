@@ -11,11 +11,9 @@ class App extends Component {
 
   handleClickUp() {
     this.setState({ showSignIn: false });
-    console.log(this.state.showSignIn);
   }
   handleClickIn() {
     this.setState({ showSignIn: true });
-    console.log(this.state.showSignIn);
   }
 
   render() {
